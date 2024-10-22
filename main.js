@@ -6,7 +6,7 @@ if (navigator.serviceWorker) {
   // Giphy cache clean
   function giphyCacheClean(giphys) {
     // Get service worker registration
-    navigation.serviceWorker.getRegistration().then(function (reg) {
+    navigator.serviceWorker.getRegistration().then(function (reg) {
       // Only post message to active SW
       if (reg.active)
         reg.active.postMessage({
